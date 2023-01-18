@@ -10,12 +10,32 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.seleniumhq.selenium:selenium-java:3.141.0'
-    implementation 'io.cucumber:cucumber-java:7.0.0'
-    implementation 'io.cucumber:cucumber-junit:7.0.0'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.7.2'
+//    implementation 'org.seleniumhq.selenium:selenium-api:3.7.1'
+
+    implementation 'io.cucumber:cucumber-java:7.10.1'
+    implementation 'io.cucumber:cucumber-junit:7.10.1'
+    implementation 'io.cucumber:cucumber-testng:7.11.0'
+
     implementation 'org.hamcrest:hamcrest:2.2'
+//  implementation 'org.testng:testng:7.6.0'
+
+    implementation 'com.github.stephenc.monte:monte-screen-recorder:0.7.7.0'
+    implementation 'ch.qos.logback:logback-classic:1.4.5'
+
+    implementation 'org.apache.maven.plugins:maven-compiler-plugin:3.10.1'
+    implementation 'org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M8'
+
+//    testImplementation 'junit:junit:4.13.1'
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer
+    testImplementation 'io.cucumber:cucumber-picocontainer:7.10.1'
+
 }
 
 test {
     useTestNG()
+    // ignoreFailures Boolean.getBoolean("test.ignoreFailures")
+    // gradle -Dtest.ignoreFailures=true clean build
+    ignoreFailures true
 }
