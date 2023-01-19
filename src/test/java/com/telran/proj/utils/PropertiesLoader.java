@@ -6,7 +6,7 @@ import java.util.Properties;
 public class PropertiesLoader {
     private static final String PROP_FILE = "/test.properties";
 
-    public static String loadProperty(String name) {
+    public static String loadProperty(String propertyName) {
 
         Properties properties = new Properties();
 
@@ -17,8 +17,8 @@ public class PropertiesLoader {
         }
 
         String value = "";
-        if (name != null) {
-            value = properties.getProperty(name);
+        if (propertyName != null) {
+            value = properties.getProperty(propertyName);
         }
         return value;
     }

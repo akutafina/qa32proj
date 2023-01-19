@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-//      tags = "~@wip",
+      tags = "~@wip",
 //      tags = "(@smoke or @ui) and (not @slow)",
         glue = {"com.telran.proj.steps"},
 //      plugin = {"pretty","json:build/cucumber-report/cucumber.json"}

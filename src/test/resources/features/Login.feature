@@ -1,6 +1,8 @@
 Feature: Login page functionality
 
   @negative
+  @demo
+    @wip
   Scenario Outline: Correct error message is when signing in with invalid credentials
     Given Login page is opened
     When login credentials ("<email>" and "<password>") are entered

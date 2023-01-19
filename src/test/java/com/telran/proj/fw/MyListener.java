@@ -28,5 +28,6 @@ public class MyListener extends AbstractWebDriverEventListener {
     public void onException(Throwable throwable, WebDriver driver) {
         logger.debug("Exception caught!" + throwable.getMessage());
         logger.debug(throwable.fillInStackTrace().toString());
+
     }
 }

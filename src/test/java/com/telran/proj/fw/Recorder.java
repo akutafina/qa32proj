@@ -14,7 +14,6 @@ import java.util.List;
 public class Recorder extends ScreenRecorder {
     private final String pathName;
 
-
     public Recorder(GraphicsConfiguration cfg, String pathName) throws IOException, AWTException {
         super(cfg);
         this.pathName = pathName;
